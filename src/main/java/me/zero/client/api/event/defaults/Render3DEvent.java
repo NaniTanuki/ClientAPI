@@ -32,7 +32,7 @@ public final class Render3DEvent implements Helper {
     private final float partialTicks;
 
     public Render3DEvent() {
-        this.partialTicks = mca.getTimer().renderPartialTicks;
+        this.partialTicks = mca.getTimer().field_194147_b; // renderPartialTicks
     }
 
     /**
