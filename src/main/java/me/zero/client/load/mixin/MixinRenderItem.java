@@ -32,7 +32,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(RenderItem.class)
 public class MixinRenderItem {
 
-    @Inject(method = "func_191966_a", at = @At("HEAD"), cancellable = true)
+    @Inject(method = "renderEffect", at = @At("HEAD"), cancellable = true)
     public void renderEffect(IBakedModel model, CallbackInfo ci) {
         GlintEffectEvent event = new GlintEffectEvent(GlintEffectEvent.GlintTarget.ITEM);
         ClientAPI.EVENT_BUS.post(event);
